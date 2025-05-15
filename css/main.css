@@ -1,3 +1,4 @@
+/* Custom CSS */
 .cards {
     display: flex;
     align-items: center;
@@ -7,11 +8,12 @@
 
 .card-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     margin: auto;
+    padding: 0 16px;
 }
 
 .card {
@@ -58,10 +60,6 @@
     background: url("../img/assets/Inicio-ImagenExcursiones4.jpg") center/cover no-repeat;
 }
 
-.mayurca-exclusive {
-  width: 1000px;
-  padding: 0%;
-}
 
 .custom-icon {
   height: 12%;
@@ -69,7 +67,48 @@
   margin-top: auto;
 }
 
+.mayurca-exclusive-strong {
+  font-size: 14px; 
+  padding-bottom: 25px;
+}
 
+.mayurca-exclusive-p {
+  font-size: 12px;
+}
+
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #card-1,
+  #card-4 {
+    grid-column: span 1;
+  }
+
+  #card-4 {
+        align-items: start;
+  }  
+
+  .custom-icon {
+  height: 12%;
+  width: 12%;
+  margin-top: 5%;
+}
+
+ .mayurca-exclusive-strong {
+  font-size: 12px;
+}
+
+.mayurca-exclusive-p {
+  font-size: 10px;
+  padding-bottom: 5%;
+}
+
+}
+
+/* Theme CSS */
 
 .ratio {
   position: relative;
